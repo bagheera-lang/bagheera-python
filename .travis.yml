@@ -26,7 +26,7 @@ after_success:
 - git remote add deploy $(git remote -v | sed -nre 's#^origin.*https://([^/]*)/([^
   ]*) *.*push.*#git@\1:\2#p')
 - git push deploy HEAD:master
-- python setup.py sdist
+- python setup.py sdist bdist_wheel
 - pip install twine
 - twine upload --config-file .pypirc-bot dist/*
 before_install:
