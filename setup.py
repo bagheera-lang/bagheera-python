@@ -12,6 +12,9 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/bagheera-lang/bagheera-python",
+    install_requires=[
+        'pyparsing',
+    ],
     entry_points={
         'console_scripts': [
             'bagheera=bagheera.cli:main'

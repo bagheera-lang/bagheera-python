@@ -12,8 +12,9 @@ install:
 - pip3 install .
 - pip3 install -r requirements.txt
 script:
-- pytest
+- pytest --durations=0 -vv
 after_success:
+- ci/after_success.sh
 - git config --global user.email "bumpversion-after-ci@example.com"
 - git config --global user.name "Bumpversion after CI"
 - bumpversion --verbose patch
