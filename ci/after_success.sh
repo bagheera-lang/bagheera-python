@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $TRAVIS_BRANCH == 'main' ]]
+if [[ $TRAVIS_BRANCH == 'main'  && $TRAVIS_PULL_REQUEST == 'false' ]] ;
   then
     git config --global user.email "bumpversion-after-ci@example.com"
     git config --global user.name "Bumpversion after CI"
