@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $TRAVIS_BRANCH == 'master' ]]
+if [[ $TRAVIS_BRANCH == 'main' ]]
   then
     git config --global user.email "bumpversion-after-ci@example.com"
     git config --global user.name "Bumpversion after CI"
@@ -16,5 +16,5 @@ if [[ $TRAVIS_BRANCH == 'master' ]]
     pip3 install twine
     twine upload --config-file .pypirc-bot dist/*
 else
-  echo "Skipped because not master"
+  echo "Skipped because not main"
 fi
