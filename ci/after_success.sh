@@ -9,8 +9,7 @@ if [[ $TRAVIS_BRANCH == 'main'  && $TRAVIS_PULL_REQUEST == 'false' ]] ;
     eval `ssh-agent -s`
     ssh-add travis_deploy_key
     git config --global push.default simple
-    git remote add deploy $(git remote -v | sed -nre 's#^origin.*https://([^/]*)/([^
-      ]*) *.*push.*#git@\1:\2#p')
+    git remote add deploy $(git remote -v | sed -nre 's#^origin.*https://([^/]*)/([^]*) *.*push.*#git@\1:\2#p')
     git push deploy HEAD:refs/heads/main
     python setup.py sdist bdist_wheel
     pip3 install twine
