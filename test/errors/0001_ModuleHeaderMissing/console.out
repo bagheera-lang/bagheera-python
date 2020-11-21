@@ -1,0 +1,13 @@
+-- EMPTY MODULE --------------------------------------------- test/errors/0001_ModuleHeaderMissing/ModuleHeaderMissing.b
+
+I ran into something unexpected when parsing your code!
+
+
+I am looking for one of the following things:
+
+    a definition or type annotation
+    a port declaration
+    a type declaration
+    an import
+    an infix declaration
+    whitespace

@@ -28,6 +28,8 @@ def test_errors(fdesc):
                 main.parse(os.path.join(path,filename))
             except Exception as e:
                 parsed = str(e)
+            else:
+                assert False
         elif filename.endswith(".out"):
             with open(os.path.join(path,filename)) as f:
                 expected = f.read()
