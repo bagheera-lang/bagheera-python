@@ -1,6 +1,15 @@
+"""
+Parsing module
+--------------
+Here are all the parsers declared.
+"""
+
 from pyparsing import Word, nums, alphas, Combine, Optional, oneOf,Group,delimitedList, Keyword, Suppress, pyparsing_common, printables, Forward, ZeroOrMore
 import bagheera.parser.errors as e
 
+"""
+parses a file
+"""
 def parser(filename=None):
     module_name = Group(delimitedList(Word(alphas.upper(),alphas.lower()),"."))("Module Name")
     module_imports = Keyword("..") | Group(delimitedList(Word(printables, excludeChars=',)')))("Module Imports")

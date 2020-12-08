@@ -1,12 +1,14 @@
 """
-    Error thrown when the module declaration is absent
+Parsing errors
+--------------
+Here you find all the errors that may be thrown during the parsing process.
 """
 
 
 class ModuleDeclarationMissingException(Exception):
-    """Error docs"""
+    """ Error thrown when the module declaration is absent """
     def __init__(self, filename):
-        """Init docs"""
+        """Initializes the Exception, with the filename so that the error message is more helpful."""
         self.message = """\
 -- EMPTY MODULE --------------------------------------------- {0}
 
