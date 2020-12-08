@@ -21,6 +21,8 @@ Indices and tables
 
 .. automodule:: bagheera
    :members:
+   :undoc-members:
 
 .. automodule:: bagheera.parser
    :members:
+   :undoc-members:
