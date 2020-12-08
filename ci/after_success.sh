@@ -4,7 +4,7 @@ if [[ $TRAVIS_BRANCH == 'main'  && $TRAVIS_PULL_REQUEST == 'false' ]] ;
   then
     git config --global user.email "bumpversion-after-ci@example.com"
     git config --global user.name "Bumpversion after CI"
-    bumpversion --verbose patch
+    bumpversion --tag --verbose patch
     chmod 600 travis_deploy_key
     eval `ssh-agent -s`
     ssh-add travis_deploy_key
