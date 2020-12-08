@@ -2,6 +2,9 @@ import os
 from bagheera.parser.parser import parser
 import pyparsing
 
+"""
+    Entry point for the parser.
+"""
 def parse(file):
     try:
         return parser(file).parseFile(file)

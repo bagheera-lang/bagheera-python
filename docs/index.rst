@@ -19,5 +19,8 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+.. automodule:: bagheera
+   :members:
+
 .. automodule:: bagheera.parser
    :members:
