@@ -4,7 +4,9 @@
 
 
 class ModuleDeclarationMissingException(Exception):
+    """Error docs"""
     def __init__(self, filename):
+        """Init docs"""
         self.message = """\
 -- EMPTY MODULE --------------------------------------------- {0}
 
