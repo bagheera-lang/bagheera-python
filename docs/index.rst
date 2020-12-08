@@ -1,8 +1,3 @@
-.. Bagheera documentation master file, created by
-   sphinx-quickstart on Tue Dec  8 16:25:33 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to Bagheera's documentation!
 ====================================
 
@@ -10,14 +5,8 @@ Welcome to Bagheera's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+Automagic imports
+=================
 
 .. automodule:: bagheera
    :members:
@@ -28,3 +17,13 @@ Indices and tables
 .. automodule:: bagheera.parser
    :members:
    :undoc-members:
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+
