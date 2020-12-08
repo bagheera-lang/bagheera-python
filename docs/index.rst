@@ -23,6 +23,8 @@ Indices and tables
    :members:
    :undoc-members:
 
+.. autoclass:: bagheera.parser.errors.ModuleDeclarationMissingException
+
 .. automodule:: bagheera.parser
    :members:
    :undoc-members:
