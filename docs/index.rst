@@ -14,6 +14,10 @@ Automagic imports
 
 .. autoclass:: bagheera.parser.errors.ModuleDeclarationMissingException
 
+.. automodule:: bagheera.cli
+    :members:
+    :undoc-members:
+
 .. automodule:: bagheera.parser
    :members:
    :undoc-members:
