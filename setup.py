@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="bagheera", # Replace with your own username
-    version="0.0.7",
+    version="0.0.8",
     author="Bagheera",
     author_email="bergmann.jerome@gmail.com",
     description="An implementation of the bagheera programming language",
