@@ -1,6 +1,8 @@
 """
     Error thrown when the module declaration is absent
 """
+
+
 class ModuleDeclarationMissingException(Exception):
     def __init__(self, filename):
         self.message = """\
