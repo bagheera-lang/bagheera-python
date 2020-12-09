@@ -22,7 +22,7 @@ copyright = '2020, Jerome Bergmann'
 author = 'Jerome Bergmann'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.6'
+release = '0.0.10'
 
 
 # -- General configuration ---------------------------------------------------
@@ -32,7 +32,7 @@ release = '0.0.6'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    "sphinx.ext.napoleon",
+    # "sphinx.ext.napoleon",
     'sphinx.ext.coverage'
 ]
 

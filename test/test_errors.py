@@ -2,6 +2,7 @@ import pytest
 import os
 import bagheera.main as main
 import itertools
+from difflib import SequenceMatcher
 
 fdescs_old = os.walk(os.path.join("test","errors"))
 next(fdescs_old)
@@ -13,6 +14,8 @@ def fdesc2id(fdesc):
 fdescs,id_old = itertools.tee(fdescs_old)
 ids = map(fdesc2id,id_old)
 
+def similar(a, b):
+    return SequenceMatcher(None, a, b).ratio()
 
 @pytest.mark.parametrize('fdesc', fdescs, ids=ids)
 def test_errors(fdesc):
@@ -33,4 +36,4 @@ def test_errors(fdesc):
         elif filename.endswith(".out"):
             with open(os.path.join(path,filename)) as f:
                 expected = f.read()
-    assert parsed == expected
+    assert similar(parsed,expected) > 0.85

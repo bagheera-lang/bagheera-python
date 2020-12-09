@@ -12,10 +12,11 @@ install:
 - pip3 install .
 - pip3 install -r requirements.txt
 script:
-- pytest --durations=0 -vv
+- pytest --durations=0 -vv --doctest-modules --cov=bagheera/
 after_success:
 - chmod +x ci/after_success.sh
 - ci/after_success.sh
+- coveralls
 before_install:
 - openssl aes-256-cbc -K $encrypted_4f3b16254c24_key -iv $encrypted_4f3b16254c24_iv
   -in secret-files.tar.enc -out secret-files.tar -d
