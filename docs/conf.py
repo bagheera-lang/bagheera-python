@@ -22,7 +22,7 @@ copyright = '2020, Jerome Bergmann'
 author = 'Jerome Bergmann'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.7'
+release = '0.0.10'
 
 
 # -- General configuration ---------------------------------------------------
