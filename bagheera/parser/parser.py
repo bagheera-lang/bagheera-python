@@ -57,8 +57,3 @@ def print_ast(item, ident=0):
             ast_print(value, ident + 1)
     except Exception:
         print("\t"*ident, item, "bla")
-
-
-if __name__ == "__main__":
-    res = parser().parseString("module Header exposing (..)")
-    print(res.dump())
