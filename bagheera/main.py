@@ -1,14 +1,19 @@
 """
-Main module used as entry point for the console executable "bagheera"
+Main module used as entry point for the console executable "bagheera".
+
+TODO: This is not true, fix.
 """
 import os
 from bagheera.parser.parser import parser
 import pyparsing
 
-"""
-Entry point for the parser.
-"""
 def parse(file):
+    """
+    Entry point for the parser.
+
+    :param file:
+    :return:
+    """
     try:
         return parser(file).parseFile(file)
     except pyparsing.ParseException as e:
