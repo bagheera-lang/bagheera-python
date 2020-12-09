@@ -4,7 +4,6 @@ Welcome to Bagheera's documentation!
 .. toctree::
 
     install
-    modules
     modules_auto
 
 
