@@ -5,7 +5,9 @@ Welcome to Bagheera's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-Automagic imports
+    install
+
+Module descriptions
 =================
 
 .. automodule:: bagheera
