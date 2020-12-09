@@ -5,6 +5,7 @@ Welcome to Bagheera's documentation!
 
     install
     modules
+    modules_auto
 
 
 Indices and tables
