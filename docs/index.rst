@@ -5,7 +5,7 @@ Welcome to Bagheera's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-    install
+    *
 
 Module descriptions
 =================
