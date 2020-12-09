@@ -36,4 +36,4 @@ def test_errors(fdesc):
         elif filename.endswith(".out"):
             with open(os.path.join(path,filename)) as f:
                 expected = f.read()
-    assert similar(parsed,expected) > 0.9
+    assert similar(parsed,expected) > 0.85

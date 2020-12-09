@@ -40,5 +40,5 @@ def test_examples(fdesc):
             with open(os.path.join(path,filename)) as f:
                 ast = f.read()
     print_ast(parsed_ast)
-    assert similar(parsed_ast, ast) > 0.95
+    assert similar(parsed_ast, ast) == 1
 
