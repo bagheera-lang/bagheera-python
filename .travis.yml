@@ -12,7 +12,7 @@ install:
 - pip3 install .
 - pip3 install -r requirements.txt
 script:
-- pytest --durations=0 -vv --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing
+- pytest --durations=0 -vv --doctest-modules --cov=bagheera/
 after_success:
 - chmod +x ci/after_success.sh
 - ci/after_success.sh
