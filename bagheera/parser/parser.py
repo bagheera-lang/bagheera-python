@@ -11,6 +11,7 @@ import bagheera.parser.errors as e
 def parser(filename=None):
     """
     Generates a callable parser for each file. The filename is necessary to get better Error messages
+
     :param filename: Name of the file, on which the parser will be applied
     :type filename: str
     :return: A parser for the file on filename
@@ -46,6 +47,7 @@ def parser(filename=None):
 def print_ast(item, ident=0):
     """
     Pretty prints the AST to std.out
+
     :param item: AST-Item to print (recursively iterates through the children)
     :param ident: Identation depth (defaults to 0 and is incremented for each recursive call)
     :type ident: int
