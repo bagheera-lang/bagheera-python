@@ -8,4 +8,4 @@ Smore words
    :template: custom-module-template.rst
    :recursive:
 
-    bagheera*
+    bagheera
