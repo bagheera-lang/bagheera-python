@@ -43,7 +43,7 @@ def parser(filename=None):
     return module_declaration + ZeroOrMore(function_declaration)
 
 
-def ast_print(item, ident=0):
+def print_ast(item, ident=0):
     """
     Pretty prints the AST to std.out
     :param item: AST-Item to print (recursively iterates through the children)

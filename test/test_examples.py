@@ -1,6 +1,7 @@
 import pytest
 import os
 import bagheera.main as main
+from bagheera.parser.parser import print_ast
 import itertools
 
 fdescs_old = os.walk(os.path.join("test","examples"))
@@ -32,4 +33,6 @@ def test_examples(fdesc):
         elif filename.endswith(".ast"):
             with open(os.path.join(path,filename)) as f:
                 ast = f.read()
+    print_ast(parsed_ast)
     assert parsed_ast == ast
+
