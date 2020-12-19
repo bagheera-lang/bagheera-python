@@ -1,3 +1,1 @@
-[[['Submodule', 'Of', 'Submodule'], '..']]
-- Module Declaration: [['Submodule', 'Of', 'Submodule'], '..']
-  - Module Name: ['Submodule', 'Of', 'Submodule']
+{'Module Declaration': {'Module Name': ['Submodule', 'Of', 'Submodule'], 'Module Exports': ['..']}}

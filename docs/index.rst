@@ -5,6 +5,7 @@ Welcome to Bagheera's documentation!
     :maxdepth: 2
     :hidden:
 
+    
     install
     modules_auto
 

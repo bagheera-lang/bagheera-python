@@ -1,0 +1,1 @@
+{'Module Declaration': {'Module Name': ['MultiLineCommentNested'], 'Module Exports': ['..']}, 'Body': [{'MultiLineComment': [['This', 'is', 'a', 'comment', 'which', 'contains', ['Another', 'comment'], 'but', 'there', 'is', 'no', 'trouble', 'here']]}, {'MultiLineComment': [['And', 'another', 'one']]}]}

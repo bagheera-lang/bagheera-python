@@ -1,0 +1,1 @@
+{'Module Declaration': {'Module Name': ['MultiLineComment'], 'Module Exports': ['..']}, 'Body': [{'MultiLineComment': [['This', 'is', 'a', 'multiline', 'comment']]}, {'MultiLineComment': [['No', 'restrictions', 'on', 'the', 'placement', 'of', 'the', 'text']]}]}

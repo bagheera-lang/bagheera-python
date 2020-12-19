@@ -15,7 +15,7 @@ def parse(file):
     :return:
     """
     try:
-        return parser(file).parseFile(file)
+        return parser(file).parseFile(file, parseAll=True)
     except pyparsing.ParseException as e:
         print(e.line)
         print(" " * (e.column - 1) + "^")
