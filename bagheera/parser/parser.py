@@ -48,21 +48,6 @@ def parser(filename=None):
     return module_declaration + ZeroOrMore(function_declaration | comment)("Body")
 
 
-def _combine_lists(tokens):
-    result = []
-    cur = ""
-    for x in tokens[0]:
-        if isinstance(x, str):
-            cur += " "+x
-        else:
-            result.append(cur)
-            cur = ""
-            result.append(x)
-    if cur:
-        result.append(cur)
-
-    return result
-
 def print_ast(item, ident=0):
     """
     Pretty prints the AST to std.out.
