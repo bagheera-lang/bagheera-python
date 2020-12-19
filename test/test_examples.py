@@ -32,7 +32,7 @@ def test_examples(fdesc):
     for filename in files:
         if filename.endswith(".b"):
             parsed = main.parse(os.path.join(path,filename))
-            parsed_ast = parsed.dump()
+            parsed_ast = parsed.asDict()
         elif filename.endswith(".out"):
             with open(os.path.join(path,filename)) as f:
                 expected = f.read()
@@ -40,5 +40,5 @@ def test_examples(fdesc):
             with open(os.path.join(path,filename)) as f:
                 ast = f.read()
     print_ast(parsed_ast)
-    assert similar(parsed_ast, ast) == 1
+    assert similar(str(parsed_ast), ast) == 1
 

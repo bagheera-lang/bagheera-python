@@ -1,6 +1,1 @@
-[[['Addition'], ['main']], ['main', 'a', ['10', '+', '2']]]
-- Function Declaration: ['main', 'a', ['10', '+', '2']]
-  - Function Parameter: ['a']
-- Module Declaration: [['Addition'], ['main']]
-  - Module Imports: ['main']
-  - Module Name: ['Addition']
+{'Module Declaration': {'Module Name': ['Addition'], 'Module Exports': [['main']]}, 'Function Declaration': {'Function Parameter': ['a']}, 'Body': [{'Function Parameter': ['a']}]}

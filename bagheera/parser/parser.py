@@ -1,28 +1,33 @@
 """
-Parsing module
---------------
+Parsing module.
+
 Here are all the parsers declared.
 """
 
-from pyparsing import Word, nums, alphas, Combine, Optional, oneOf, Group, delimitedList, Keyword, Suppress, pyparsing_common, printables, Forward, ZeroOrMore
+from pyparsing import Word, nums, alphas, Combine, Optional, oneOf, Group, delimitedList, Keyword, Suppress, \
+    pyparsing_common, printables, Forward, ZeroOrMore, SkipTo, LineEnd, restOfLine, quotedString,nestedExpr, StringEnd
 import bagheera.parser.errors as e
 
 
 def parser(filename=None):
     """
-    Generates a callable parser for each file. The filename is necessary to get better Error messages
+    Generate a callable parser for each file. The filename is necessary to get better Error messages.
+
     :param filename: Name of the file, on which the parser will be applied
     :type filename: str
     :return: A parser for the file on filename
     """
-    module_name = Group(delimitedList(Word(alphas.upper(),alphas.lower()),"."))("Module Name")
-    module_imports = Keyword("..") | Group(delimitedList(Word(printables, excludeChars=',)')))("Module Imports")
+    line_comment = Group(Suppress("--") + restOfLine + SkipTo(LineEnd()))("SingleLineComment")
+    block_comment = nestedExpr("{-", "-}")("MultiLineComment")
+    comment = Group(line_comment | block_comment)
+    module_name = Group(delimitedList(Word(alphas.upper(),alphas),"."))("Module Name")
+    module_exports = Group(Keyword("..") | Group(delimitedList(Word(printables, excludeChars=',)'))))("Module Exports")
     module_declaration = Group(
         Suppress("module").setFailAction(e.ModuleDeclarationMissingException(filename)) +
         module_name +
         Suppress("exposing") +
         Suppress("(") +
-        module_imports+Suppress(")"))("Module Declaration")
+        module_exports+Suppress(")"))("Module Declaration")
 
     LPAR, RPAR = map(Suppress, '()')
     integer = Word(nums)
@@ -40,12 +45,13 @@ def parser(filename=None):
     function_declaration = Group(function_name + function_parameters + Suppress("=") + function_body)\
         ("Function Declaration")
 
-    return module_declaration + ZeroOrMore(function_declaration)
+    return module_declaration + ZeroOrMore(function_declaration | comment)("Body")
 
 
 def print_ast(item, ident=0):
     """
-    Pretty prints the AST to std.out
+    Pretty prints the AST to std.out.
+
     :param item: AST-Item to print (recursively iterates through the children)
     :param ident: Identation depth (defaults to 0 and is incremented for each recursive call)
     :type ident: int
@@ -54,6 +60,6 @@ def print_ast(item, ident=0):
     try:
         for key, value in item.items():
             print("\t"*ident, key, "->", value)
-            ast_print(value, ident + 1)
+            print_ast(value, ident + 1)
     except Exception:
-        print("\t"*ident, item, "bla")
+        print("\t"*ident, item, "")
