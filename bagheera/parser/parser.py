@@ -17,7 +17,6 @@ def parser(filename=None):
     :type filename: str
     :return: A parser for the file on filename
     """
-
     line_comment = Group(Suppress("--") + restOfLine + SkipTo(LineEnd()))("SingleLineComment")
     block_comment = nestedExpr("{-", "-}")("MultiLineComment")
     comment = Group(line_comment | block_comment)
