@@ -1,2 +1,2 @@
-test/*.b linguist-language=Bagheera
+test/*.b linguist-vendored
 test/*.ast linguist-language=Python
