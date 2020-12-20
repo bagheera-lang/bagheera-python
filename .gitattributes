@@ -1,0 +1,2 @@
+test/*.b linguist-language=Bagheera
+test/*.ast linguist-language=Python
